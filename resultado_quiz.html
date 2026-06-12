@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+
+<div class="contenedor">
+
+    <div class="card">
+
+        <h2>Resultado del Quizz</h2>
+
+        <p>Usuario: {{ usuario }}</p>
+
+        <p>Puntaje: {{ puntaje }}/10</p>
+
+        <p>Porcentaje: {{ porcentaje }}%</p>
+
+        <a href="{{ url_for('modulo2') }}" class="btn">
+            Regresar al módulo
+        </a>
+
+    </div>
+
+</div>
+
+{% endblock %}

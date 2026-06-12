@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+
+<div class="contenedor">
+
+    <div class="card">
+
+        <h2>Bienvenido a CONECTA Y APRENDE</h2>
+
+        <p>
+            Plataforma educativa CECyTEM
+        </p>
+
+        <a href="{{ url_for('login') }}" class="btn">
+            Iniciar Sesión
+        </a>
+
+    </div>
+
+</div>
+
+{% endblock %}

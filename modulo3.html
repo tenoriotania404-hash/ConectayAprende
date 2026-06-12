@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+
+<div class="contenedor">
+
+    <h2>Bienvenido {{ usuario }}</h2>
+
+    <div class="card">
+
+        <h3>Módulo 3: Arte</h3>
+
+        <p><strong>Objetivo:</strong> Utilizar el arte como herramienta de expresión y bienestar emocional.</p>
+
+        <h4>Video: Arte y Pintura</h4>
+        <p>
+            Observa el siguiente video para conocer diferentes
+            técnicas de pintura, así como la importancia del arte
+            en el desarrollo de la creatividad y la expresión de
+            ideas y emociones.
+        </p>
+
+        <video width="600" controls>
+            <source src="{{ url_for('static', filename='Conecta_y_Aprende/Modulo_3_Arte/arte y pintura.mp4') }}" type="video/mp4">
+        </video>
+
+        <br><br>
+
+        <h4>Presentación PDF</h4>
+        <p>
+            Consulta la siguiente presentación para reforzar los
+            conocimientos adquiridos en este módulo.
+        </p>
+
+        <a href="{{ url_for('static', filename='Conecta_y_Aprende/Modulo_3_Arte/presentacion_2_.pdf') }}" target="_blank" class="btn">Descargar PDF</a>
+
+        <br><br>
+
+        <h4>Infografía</h4>
+
+        <p>
+            La siguiente infografía presenta de manera visual
+            los conceptos más importantes del arte.
+        </p>
+
+        <img src="{{ url_for('static', filename='Conecta_y_Aprende/Modulo_3_Arte/infografia_1.png') }}" alt="Infografía Arte" width="600">
+
+    </div>
+
+    <a href="{{ url_for('inicio') }}" class="btn">
+        Regresar
+    </a>
+
+</div>
+
+{% endblock %}

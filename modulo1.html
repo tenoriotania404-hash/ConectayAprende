@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+
+<div class="contenedor">
+
+    <h2>Bienvenido {{ usuario }}</h2>
+
+    <div class="card">
+
+        <h3>Modulo 1: Oficios</h3>
+
+        <p><strong>Objetivo:</strong> Desarrollar habilidades para el trabajo y la independencia economica.  
+        </p>
+        <p>
+            ¡Menos rollo y mas accion!. 
+            Preparate para dominar un 
+            oficio clave, desarrollar tu 
+            talento y abrirte las puesta 
+            a un futuro donde tu decides 
+            cuanto vale tu trabajo. 
+        </p>
+    
+        <img src="{{ url_for('static', filename='Conecta_y_Aprende/Modulo_1_Oficios/infografia.jpeg') }}" alt="Infografía" width="600">
+    </div>
+    <a href="{{ url_for('inicio') }}" class="btn">
+        Regresar
+    </a>
+
+</div>
+
+{% endblock %}

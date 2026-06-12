@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+
+<div class="contenedor">
+
+    <h2>Bienvenido {{ usuario }}</h2>
+
+    <div class="card">
+
+        <h3>Módulo 4: Habilidades Digitales</h3>
+
+        <p>
+            <strong>Objetivo:</strong> Desarrollar habilidades básicas para el uso de herramientas digitales y la computadora.
+        </p>
+        <h4>Video: Tutorial sobre el uso de la computadora</h4>
+
+        <p>
+            Observa el siguiente video para aprender conceptos básicos
+            sobre el uso de la computadora y herramientas digitales.
+        </p>
+
+        <video width="600" controls>
+            <source src="{{ url_for('static', filename='Conecta_y_Aprende/Modulo_4_Habilidades_Digitales/tutorial sobre el uso de la computadora.mp4') }}" type="video/mp4">Tu navegador no soporta videos HTML5.
+        </video>
+
+        <br><br>
+
+        <h4>Lectura</h4>
+
+        <p>
+            Descarga y consulta la siguiente lectura para reforzar los conocimientos
+            adquiridos en este módulo.
+        </p>
+
+
+        <a href="{{ url_for('static', filename='Conecta_y_Aprende/Modulo_4_Habilidades_Digitales/lectura.pdf') }}" target="_blank" class="btn">Descargar PDF</a>
+
+        <br><br>
+
+
+        <h4>Guía de Repaso</h4>
+
+        <p>
+            Descarga la guía de repaso para practicar los temas vistos.
+        </p>
+
+        <a href="{{ url_for('static', filename='Conecta_y_Aprende/Modulo_4_Habilidades_Digitales/GUÍA DE REPASO.docx') }}" target="_blank" class="btn">Deacargar Documento Word</a>
+
+    </div>
+
+    <br>
+
+    <a href="{{ url_for('inicio') }}" class="btn">
+        Regresar
+    </a>
+
+</div>
+
+{% endblock %}

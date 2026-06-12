@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+
+<div class="contenedor">
+
+    <h2>Bienvenido {{ usuario }}</h2>
+
+    <div class="card">
+
+        <h3>Contenido Educativo</h3>
+
+        <p>
+            Aqui podras observar distinto contenido visual el cual, te servira para poder conocer informacion acerca de nuestro proyecto. | Disfruta del contenido. 
+        </p>
+
+        <ul>
+            <li>Material de estudio</li>
+            <li><a href="{{ url_for('modulo1') }}">Modulo 1: Oficios</a></li>
+            <li><a href="{{ url_for('modulo2') }}">Modulo 2: Actividades culturales</a></li>
+            <li><a href="{{ url_for('modulo3') }}">Modulo 3: Arte</a></li>
+            <li><a href="{{ url_for('modulo4') }}">Modulo 4: Habilidades digitales</a></li>
+        </ul>
+
+    </div>
+
+    <a href="{{ url_for('logout') }}" class="btn">
+        Cerrar Sesión
+    </a>
+
+</div>
+
+{% endblock %}
